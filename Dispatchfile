@@ -42,7 +42,7 @@ task "build": {
       env: [
         {
           name: "DOCKER_CONFIG",
-          value: "/builder/home/.docker"
+          value: "/root/.docker"
         }
       ]
     }
