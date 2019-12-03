@@ -6,7 +6,7 @@ eresource "src-git": {
 
 resource "docker-image": {
   type: "image"
-  param url: "docker.io/dockeryaodi/hello-world:$(context.build.name)"
+  param url: "dockeryaodi/hello-world:$(context.build.name)"
   param digest: "$(inputs.resources.docker-image.digest)"
 }
 
@@ -34,11 +34,7 @@ task "build": {
       image: "chhsiao/kaniko-executor"
       args: [
         "--destination=$(outputs.resources.docker-image.url)",
-<<<<<<< HEAD
         "--context=/workspace/src-git",
-=======
-        "--context=/workspace/src-git/map",
->>>>>>> 46e10092eadd61dcc6225ece6d3d1e82b345845d
         "--oci-layout-path=/builder/home/image-outputs/docker-image",
         "--dockerfile=/workspace/src-git/Dockerfile"
       ],
