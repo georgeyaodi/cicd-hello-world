@@ -34,7 +34,7 @@ task "build": {
       image: "chhsiao/kaniko-executor"
       args: [
         "--destination=$(outputs.resources.docker-image.url)",
-        "--context=/workspace/src-giti/map",
+        "--context=/workspace/src-git/map",
         "--oci-layout-path=/builder/home/image-outputs/docker-image",
         "--dockerfile=/workspace/src-git/Dockerfile"
       ],
