@@ -4,13 +4,11 @@ resource "src-git": {
   param revision: "$(context.git.commit)"
 }
 
-
 resource "docker-image": {
   type: "image"
   param url: "dockeryaodi/hello-world:$(context.build.name)"
   param digest: "$(inputs.resources.docker-image.digest)"
 }
-
 
 resource "gitops-git": {
   type: "git"
@@ -30,6 +28,8 @@ task "test": {
   ]
 }
 
+
+
 task "build": {
   inputs: ["src-git"]
   outputs: ["docker-image"]
@@ -48,7 +48,7 @@ task "build": {
       env: [
         {
           name: "DOCKER_CONFIG",
-          value: "/root/.docker"
+          value: "/builder/home/.docker"
         }
       ]
     }
