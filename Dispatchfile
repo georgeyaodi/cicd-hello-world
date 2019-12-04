@@ -5,6 +5,7 @@ resource "src-git": {
 }
 
 
+
 resource "docker-image": {
   type: "image"
   param url: "dockeryaodi/hello-world:$(context.build.name)"
