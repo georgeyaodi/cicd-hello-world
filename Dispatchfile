@@ -11,6 +11,7 @@ resource "docker-image": {
   param digest: "$(inputs.resources.docker-image.digest)"
 }
 
+
 resource "gitops-git": {
   type: "git"
   param url: "https://github.com/175203202/cicd-hello-world-gitops"
