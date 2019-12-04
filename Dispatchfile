@@ -12,16 +12,6 @@ resource "docker-image": {
 }
 
 task "test": {
-  inputs: ["src-git"]
-
-  steps: [
-    {
-      name: "test"
-      image: "golang:1.13.0-buster"
-      command: [ "go", "test", "./..." ]
-      workingDir: "/workspace/src-git"
-    }
-  ]
 }
 
 
