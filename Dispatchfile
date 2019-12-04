@@ -18,7 +18,7 @@ task "test": {
     {
       name: "test"
       image: "golang:1.13.0-buster"
-      command: [ "go", "test", "./..." ]
+      command: [ "" ]
       workingDir: "/workspace/src-git"
     }
   ]
