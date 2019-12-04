@@ -29,7 +29,7 @@ task "test": {
 task "build": {
   inputs: ["src-git"]
   outputs: ["docker-image"]
-  deps: ["test1"]
+  deps: ["test"]
 
   steps: [
     {
@@ -44,7 +44,7 @@ task "build": {
       env: [
         {
           name: "DOCKER_CONFIG",
-          value: "/root/.docker"
+          value: "/builder/home/.docker"
         }
       ]
     }
