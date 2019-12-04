@@ -57,7 +57,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Version: %s\n", Version)
 	fmt.Fprintf(w, "Build time: %s\n", Buildtime)
 	fmt.Fprintf(w, "D2iQ CI/CD!\n")
-	fmt.Fprintf(w, "This change will trigger a build!123456789\n")
+	fmt.Fprintf(w, "This change will trigger a build!123456789 1\n")
 }
 
 // [END all]
