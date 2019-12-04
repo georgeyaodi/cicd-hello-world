@@ -14,7 +14,6 @@ resource "docker-image": {
   param digest: "$(inputs.resources.docker-image.digest)"
 }
 
-
 task "test": {
   inputs: ["src-git"]
 
@@ -28,10 +27,10 @@ task "test": {
   ]
 }
 
+
 task "build": {
   inputs: ["src-git"]
   outputs: ["docker-image"]
-  deps: ["test"]
 
   steps: [
     {
