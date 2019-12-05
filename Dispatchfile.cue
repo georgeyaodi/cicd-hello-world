@@ -14,7 +14,7 @@ resource "docker-image": {
 
 resource "gitops-git": {
   type: "git"
-  param url: "https://github.com/175203202/cicd-hello-world-gitops"
+  param url: "https://github.com/georgeyaodi/cicd-hello-world-gitops"
 }
 
 task "test": {
