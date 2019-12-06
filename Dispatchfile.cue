@@ -65,8 +65,9 @@ task "deploy": {
       args: [
         "-git-revision=$(context.git.commit)",
         "--force-push",
-        "-substitute=imageName=dockeryaodi/hello-world@$(inputs.resources.docker-image.digest)"
-      ]
+        "-substitute=imageName=dockeryaodi/hello-world@$(inputs.resources.docker-image.digest)",
+        "--verbose"
+	]
     }
   ]
 }
