@@ -1,4 +1,4 @@
-FROM golang:latest
+FROM golang:l.13.11-alpine
 
 ADD . /go/src/hello-app
 
