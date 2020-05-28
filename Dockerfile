@@ -1,4 +1,4 @@
-FROM golang:l.13.11
+FROM golang:1.13.11
 
 ADD . /go/src/hello-app
 
